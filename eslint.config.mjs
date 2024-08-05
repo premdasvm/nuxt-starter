@@ -13,5 +13,6 @@ export default withNuxt([
 			...eslintConfigPrettier.rules,
 			...eslintPluginPrettierRecommended.rules,
 		},
+		ignores: ['.nuxt/*', '.nuxt/*/**', '.vscode/*', '.vscode/*/**', '.output/*', '.output/*/**', 'node_modules'],
 	},
 ]);
