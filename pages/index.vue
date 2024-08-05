@@ -1,6 +1,9 @@
 <template>
 	<div class="flex min-h-screen items-center justify-center">
-		<h1>Nuxt 3 Starter</h1>
+		<div class="flex gap-3">
+			<h1>Nuxt 3 Starter</h1>
+			<Icon name="logos:nuxt-icon" size="20" />
+		</div>
 	</div>
 </template>
 
