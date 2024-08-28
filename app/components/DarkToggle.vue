@@ -8,7 +8,7 @@ function toggleColorMode() {
 
 <template>
 	<button @click="toggleColorMode">
-		<Icon name="carbon:sun" v-if="colorMode.preference === 'light'" />
-		<Icon name="carbon:moon" v-else />
+		<Icon v-if="colorMode.preference === 'light'" name="carbon:sun" />
+		<Icon v-else name="carbon:moon" />
 	</button>
 </template>
