@@ -12,7 +12,7 @@
 		"lint:fix": "eslint . --fix",
 		"format": "prettier . --write",
 		"typecheck": "vue-tsc --noEmit",
-		"prepare": "husky install"
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"nuxt": "^3.13.2",
