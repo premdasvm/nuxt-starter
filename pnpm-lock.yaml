@@ -33,6 +33,18 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.12.1
         version: 6.12.1(magicast@0.3.5)(rollup@4.21.3)
+      '@tailwindcss/aspect-ratio':
+        specifier: ^0.4.2
+        version: 0.4.2(tailwindcss@3.4.13)
+      '@tailwindcss/container-queries':
+        specifier: ^0.1.1
+        version: 0.1.1(tailwindcss@3.4.13)
+      '@tailwindcss/forms':
+        specifier: ^0.5.9
+        version: 0.5.9(tailwindcss@3.4.13)
+      '@tailwindcss/typography':
+        specifier: ^0.5.15
+        version: 0.5.15(tailwindcss@3.4.13)
       '@vueuse/core':
         specifier: ^11.1.0
         version: 11.1.0(vue@3.5.6(typescript@5.6.2))
@@ -60,6 +72,9 @@ importers:
       tailwindcss:
         specifier: ^3.4.13
         version: 3.4.13
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.13)
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -1167,6 +1182,26 @@ packages:
 
   '@swc/helpers@0.5.13':
     resolution: {integrity: sha512-UoKGxQ3r5kYI9dALKJapMmuK+1zWM/H17Z1+iwnNmzcJRnfFuevZs375TA5rW31pu4BS4NoSy1fRsexDXfWn5w==}
+
+  '@tailwindcss/aspect-ratio@0.4.2':
+    resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+
+  '@tailwindcss/container-queries@0.1.1':
+    resolution: {integrity: sha512-p18dswChx6WnTSaJCSGx6lTmrGzNNvm2FtXmiO6AuA1V4U5REyoqwmT6kgAsIMdjo07QdAfYXHJ4hnMtfHzWgA==}
+    peerDependencies:
+      tailwindcss: '>=3.2.0'
+
+  '@tailwindcss/forms@0.5.9':
+    resolution: {integrity: sha512-tM4XVr2+UVTxXJzey9Twx48c1gcxFStqn1pQz0tRsX8o3DvxhN5oY5pvyAbUx7VTaZxpej4Zzvc6h+1RJBzpIg==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20'
+
+  '@tailwindcss/typography@0.5.15':
+    resolution: {integrity: sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20'
 
   '@trysound/sax@0.2.0':
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -2842,11 +2877,17 @@ packages:
     resolution: {integrity: sha512-gvVijfZvn7R+2qyPX8mAuKcFGDf6Nc61GdvGafQsHL0sBIxfKzA+usWn4GFC/bk+QdwPUD4kWFJLhElipq+0VA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  lodash.castarray@4.4.0:
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+
   lodash.defaults@4.2.0:
     resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
 
   lodash.isarguments@3.1.0:
     resolution: {integrity: sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==}
+
+  lodash.isplainobject@4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
 
   lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
@@ -2942,6 +2983,10 @@ packages:
   min-indent@1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
+
+  mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
 
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -3496,6 +3541,10 @@ packages:
     peerDependencies:
       postcss: ^8.4.31
 
+  postcss-selector-parser@6.0.10:
+    resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
+    engines: {node: '>=4'}
+
   postcss-selector-parser@6.1.2:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
@@ -3989,6 +4038,11 @@ packages:
     hasBin: true
     peerDependencies:
       tailwindcss: 1 || 2 || 2.0.1-compat || 3
+
+  tailwindcss-animate@1.0.7:
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
 
   tailwindcss@3.4.13:
     resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}
@@ -5747,6 +5801,27 @@ snapshots:
   '@swc/helpers@0.5.13':
     dependencies:
       tslib: 2.7.0
+
+  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@3.4.13)':
+    dependencies:
+      tailwindcss: 3.4.13
+
+  '@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.13)':
+    dependencies:
+      tailwindcss: 3.4.13
+
+  '@tailwindcss/forms@0.5.9(tailwindcss@3.4.13)':
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.4.13
+
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.13)':
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      postcss-selector-parser: 6.0.10
+      tailwindcss: 3.4.13
 
   '@trysound/sax@0.2.0': {}
 
@@ -7707,9 +7782,13 @@ snapshots:
     dependencies:
       p-locate: 6.0.0
 
+  lodash.castarray@4.4.0: {}
+
   lodash.defaults@4.2.0: {}
 
   lodash.isarguments@3.1.0: {}
+
+  lodash.isplainobject@4.0.6: {}
 
   lodash.memoize@4.1.2: {}
 
@@ -7789,6 +7868,8 @@ snapshots:
   mimic-fn@4.0.0: {}
 
   min-indent@1.0.1: {}
+
+  mini-svg-data-uri@1.4.4: {}
 
   minimatch@3.1.2:
     dependencies:
@@ -8480,6 +8561,11 @@ snapshots:
       postcss: 8.4.47
       postcss-value-parser: 4.2.0
 
+  postcss-selector-parser@6.0.10:
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+
   postcss-selector-parser@6.1.2:
     dependencies:
       cssesc: 3.0.0
@@ -8945,6 +9031,10 @@ snapshots:
       tailwindcss: 3.4.13
     transitivePeerDependencies:
       - supports-color
+
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.13):
+    dependencies:
+      tailwindcss: 3.4.13
 
   tailwindcss@3.4.13:
     dependencies:

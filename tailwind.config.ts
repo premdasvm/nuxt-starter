@@ -1,4 +1,8 @@
 import type { Config } from 'tailwindcss';
+import TailwindForms from '@tailwindcss/forms';
+import TailwindAspectRatio from '@tailwindcss/aspect-ratio';
+import TailwindTypography from '@tailwindcss/typography';
+import TailwindAnimate from 'tailwindcss-animate';
 
 const config = {
 	darkMode: 'class',
@@ -15,6 +19,7 @@ const config = {
 			},
 		},
 	},
+	plugins: [TailwindForms({ strategy: 'class' }), TailwindAspectRatio, TailwindTypography, TailwindAnimate],
 } satisfies Config;
 
 export default config;
