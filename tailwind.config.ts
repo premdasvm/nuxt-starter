@@ -10,6 +10,9 @@ const config = {
 				foreground: 'hsl(var(--foreground))',
 				border: 'hsl(var(--border))',
 			},
+			fontFamily: {
+				sans: ['Poppins'],
+			},
 		},
 	},
 } satisfies Config;
